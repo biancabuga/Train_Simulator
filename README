@@ -1,0 +1,123 @@
+/*BUGA Bianca Gabriela - 311CD*/
+Local score: 117 points
+
+Local checker report:
+
+ -= TEMA 1 SDA =-
+
+README: 5/5
+test1.in: 2.5/2.5
+  Valgrind test.in: 1/1
+test2.in: 2.5/2.5
+  Valgrind test.in: 1/1
+test3.in: 2.5/2.5
+  Valgrind test.in: 1/1
+test4.in: 2.5/2.5
+  Valgrind test.in: 1/1
+test5.in: 5/5
+  Valgrind test.in: 1/1
+test6.in: 2/2
+  Valgrind test.in: 1/1
+test7.in: 2/2
+  Valgrind test.in: 1/1
+test8.in: 2/2
+  Valgrind test.in: 1/1
+test9.in: 3/3
+  Valgrind test.in: 1/1
+test10.in: 3/3
+  Valgrind test.in: 1/1
+test11.in: 5/5
+  Valgrind test.in: 1/1
+test12.in: 5/5
+  Valgrind test.in: 1/1
+test13.in: 5/5
+  Valgrind test.in: 1/1
+test14.in: 5/5
+  Valgrind test.in: 1/1
+test15.in: 2/2
+  Valgrind test.in: 1/1
+test16.in: 2/2
+  Valgrind test.in: 1/1
+test17.in: 2/2
+  Valgrind test.in: 1/1
+test18.in: 5/5
+  Valgrind test.in: 1/1
+test19.in: 5/5
+  Valgrind test.in: 1/1
+test20.in: 5/5
+  Valgrind test.in: 1/1
+test21.in: 5/5
+  Valgrind test.in: 1/1
+test22.in: 3/3
+  Valgrind test.in: 1/1
+test23.in: 3/3
+  Valgrind test.in: 1/1
+test24.in: 3/3
+  Valgrind test.in: 1/1
+test25.in: 3/3
+  Valgrind test.in: 1/1
+test26.in: 2/2
+  Valgrind test.in: 1/1
+test27.in: 2/2
+  Valgrind test.in: 1/1
+test28.in: 2/2
+  Valgrind test.in: 1/1
+test29.in: 2/2
+  Valgrind test.in: 1/1
+test30.in: 0/2
+
+Total: 98.0/100
+Valgrind: 19/20
+
+
+
+Train Simulator Project Overview:
+
+Aceasta tema utilizeaza o lista circulara dublu inlantuita pentru a reprezenta un tren cu mai multe vagoane si permite modificarea dinamica a vagoanelor trenului prin comenzi executate dintr-o coada.
+
+Features:
+
+    Dynamic Train Modification: Adauga, sterge sau modifica vagoane din orice pozitie.
+    Mechanic Simulation: Muta mecanicul in alt vagon pentru a efectua operatii.
+    Command Queue: Pastreaza comenzile intr-o coada pentru a le executa secvential.
+    Search Operations: Cauta siruri de caractere in structura trenului.
+    Flexible Output: Vizualizeaza starea curenta a trenului si pozitia mecanicului in mod dinamic.
+
+Implementation Details:
+
+Ne folosim de o lista circulara dublu inlantuita pentru a reprezenta trenul.
+
+    train_t Structure: Reprezentam trenul si tinem cont de pozitia mecanicului.
+
+    deq_n Structure: Nodurile din lista dublu inlatuita reprezinta vagoanele. Contine valoarea din nodul respectiv si pointeri catre nodul anterior si nodul urmator.
+
+    queue_t Structure: Reprezinta o coada de comenzi care urmeaza sa fie executate asupra trenului.
+
+    Command Execution: Comenzi care realizeaza mutarea mecanicului, inserarea sau stergerea vagoanelor, inscriptionarea vagoanelor, cautarea unor siruri de caractere sau afisarea starii curente a trenului sunt executate in mod secvential din coada de comenzi.
+
+Compilation:
+
+    The project includes a Makefile for easy compilation. Use make to build and make clean to remove build files.
+
+Usage:
+
+    Execute the tema1 executable. Comenzile sunt citite din tema1.in, si rezultatele sunt scrise in tema1.out.
+
+Commands:
+
+    Comenzile includ mutarea mecanicului, inserarea sau stergerea vagoanelor, inscriptionarea lor, cautarea de siruri de caractere sau afisarea structurii.
+
+Example commands:
+
+    WRITE A
+    MOVE_RIGHT
+    SEARCH AN
+    SHOW
+
+Input and Output:
+
+    Comenzile sunt citite din tema1.in, si rezultatele sunt scrise in tema1.out.
+
+Error Handling:
+
+    Erorile sunt raportate prin mesaje descriptive in fisierul cu output.
